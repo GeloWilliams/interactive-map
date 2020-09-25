@@ -1,0 +1,350 @@
+h3 {
+	font-size: 1.5rem;
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
+}
+a:visited {
+	color: #fff;
+}
+
+#map-container {
+	background-color: #1d1e22; 
+	max-height: 500px;
+	position: relative;
+	overflow: hidden;
+	display: flex;
+}
+
+.overview {
+	align-items: flex-end;
+	-moz-align-items: flex-end;
+}
+
+.focus {
+	align-items: flex-start;
+		-moz-align-items: flex-start;
+}
+
+.text {
+	color: #fff;
+	margin: 1rem 1.5rem;
+	font-size: .9rem
+}
+
+#map-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	overflow: hidden;
+	max-width: 1200px;
+	margin: 0 auto 2rem;
+	border: 1px solid #181818;
+}
+
+.dots-box svg {
+	position: absolute;
+	z-index: 2;
+	left: 5%;
+	top: 5%;
+	cursor: pointer;
+}
+
+svg.zoom-in {
+	top: 2%;
+}
+
+svg.zoom-out {
+	top: 25%;
+}
+
+.dots-box svg .cls-2 {
+	opacity: .9;
+}
+
+
+
+.map-box {
+	position: relative;
+	height: 800px;
+	width: 100%;
+	overflow: hidden;
+	/* margin-left: 18%; - when zooming out */
+	display: flex; 
+}
+.map-box svg {
+	position: absolute;
+	top: -50px;
+}
+
+@media all and (max-width: 800px) {
+	.map-box svg {
+		top: 0;
+	}
+}
+
+.map-box svg:hover {
+	cursor: move;
+}
+.arrows {
+	position: sticky;
+	top: 0;
+	z-index: 5;
+	width: 100%;
+	height: 70px;
+	background: #181818;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.arrows > h2 {
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 1.5rem;
+}
+
+@media all and (max-width: 500px) {
+	.arrows > h2 {
+		font-size: 1.2rem;
+	}
+}
+
+#info-box > .text > h3 {
+	display: none;
+}
+
+#info-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	background-color: #181818;
+	max-width: 1200px;
+	position: relative;
+	margin-top: -4rem;
+}
+
+#place-box {
+	position: relative;
+	max-width: 1400px;
+	margin: 0 auto;
+	flex: 1 1 50%;
+	padding: 1rem;
+}
+.place {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	margin: 0 auto;
+	width: 100%;
+	height: 300px;
+}
+
+@media all and (max-width: 900px) {
+	.place {
+		max-height: 210px;
+	}
+}
+
+
+.loc-name {
+	color: #fff;
+	font-size: 1.4rem;
+	font-weight: 600;
+}
+
+.loc-name-box {
+	position: absolute;
+	z-index: 3;
+	top: 5%;
+	right: 5%;
+}
+
+#info-box {
+	background-color: #181818;
+	position: relative;
+	flex: 1 1 50%;
+}
+
+.arrow {
+	cursor: pointer;
+	position: absolute;
+	top: 20px;
+	border-style: solid;
+	z-index: 2;
+}
+
+#arrow-left {
+	border-width: 15px 20px 15px 0;
+	border-color: transparent #ffffff transparent transparent;
+	left: 0;
+	margin-left: 30px;
+}
+
+#arrow-right {
+	border-width: 15px 0 15px 20px;
+	border-color: transparent transparent transparent #ffffff;
+	right: 0;
+	margin-right: 30px;
+}
+
+.dd-map-dot {
+	cursor: pointer;
+}
+
+.dd-map-hover-dot {
+	cursor: pointer;
+}
+
+.dd-map-active-dot {
+	cursor: pointer;
+}
+
+.dd-map-text {
+	fill: #000;
+	font-weight: 600;
+	font-size: 1.2rem;
+}
+
+.dd-map-hover-text {
+	fill: #000;
+	font-weight: 600;
+	font-size: 1.2rem;
+}
+
+.dd-small-text {
+	font-size: 1rem !important;
+}
+
+#selection-strip {
+	width: 100%;
+	max-width: 1198px;
+	background-color: #1d1e22;
+	border: 1px solid #181818;
+}
+
+.minus-view {
+	width: 1200px;
+	height: 1060px;
+	margin: -80px auto 0;
+}
+
+.plus-view {
+	width: 1500px;
+	height: 1255px;
+	margin: -80px auto 0;
+}
+
+.selection-box {
+	display: flex;
+	list-style: none;
+	color: #fff;
+	justify-content: center;
+	height:	25px; 
+}
+.selection-box li {
+	margin: -1rem .1rem;
+	cursor: pointer;
+	border: .23rem solid rgba(0,0,0,0);
+	padding: .65rem 1rem;
+}
+
+.set-map {
+	align-items: flex-start;
+}
+
+circle.cls-2 {
+	fill: #fff;
+	opacity: .75;
+}
+
+
+@media all and (max-width: 1000px) {
+	.overview {
+		align-items: flex-start;
+	}
+}
+
+@media all and (max-width: 900px) {
+	#info-container {
+		flex-direction: column;
+	}
+
+	#place-box {
+		width: 100%;
+		order: 2;
+		padding: 0;
+	}
+	#info-box {
+		order: 1;
+		border: 1px solid #181818;
+		padding: 1rem;
+		background-color: #fff;
+	}
+	.text {
+		color: #181818;
+	}
+
+	.place {
+		height: 250px;
+	}
+
+}
+
+@media all and (max-width: 700px) {
+	#map-container {
+		max-height: 400px;
+	}
+}
+
+@media all and (max-width: 500px) {
+	#map-container {
+		max-height: 350px;
+	}
+}
+
+@media all and (min-width: 1200px) {
+	#map-container {
+		max-height: 750px;
+	}
+	.map-box svg {
+		top: 0;
+	}
+}
+
+
+
+/*===================================================================================
+
+Places
+
+===================================================================================*/
+
+										/* WORLD */
+
+/* Sawdusk City */
+.place1 {
+	background-image: url('https://www.gelostory.com/distant-destiny/images/places/sawdusk.jpg')
+}
+/* The Royal Palace */
+.place2 {
+	background-image: url('https://www.gelostory.com/distant-destiny/images/places/royal-palace.jpg')
+}
+/* Jesboici */
+.place3 {
+	background-image: url('https://www.gelostory.com/distant-destiny/images/places/jesboici.jpg')
+}
+/* Okarain */
+.place4 {
+	background-image: url('https://www.gelostory.com/distant-destiny/images/places/okarain.jpg')
+}
+/* Senitrue */
+.place5 {
+	background-image: url('https://www.gelostory.com/distant-destiny/images/places/senitrue.jpg')
+}
